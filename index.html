@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Questionnaire McDonald's</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>Questionnaire McDonald's</h1>
+    <p>Merci de prendre quelques minutes pour répondre.</p>
+
+    <!-- Zone d'image randomisée -->
+    <div class="image-test">
+      <img id="testImage" alt="Image de la tablette" />
+    </div>
+
+    <form action="https://formspree.io/f/mrbrbopl" method="POST">
+
+      <!-- A/B Testing -->
+      <label for="chocolat">Si McDonald's proposait une tablette de chocolat, laquelle préféreriez-vous ?</label>
+      <select id="chocolat" name="chocolat" required>
+        <option value="" disabled selected>Choisissez une option</option>
+        <option value="partenariat">Une tablette issue d’un partenariat (ex : Willy Wonka)</option>
+        <option value="mcdo">Une tablette créée uniquement par McDonald's</option>
+      </select>
+
+      <!-- Partie 1 – Profil -->
+      <label for="age">Quel est votre âge ?</label>
+      <select id="age" name="age" required>
+        <option value="moins18">Moins de 18 ans</option>
+        <option value="18-24">18-24 ans</option>
+        <option value="25-34">25-34 ans</option>
+        <option value="35-44">35-44 ans</option>
+        <option value="45plus">45 ans et plus</option>
+      </select>
+
+      <label for="situation">Quelle est votre situation actuelle ?</label>
+      <select id="situation" name="situation" required>
+        <option value="etudiant">Étudiant</option>
+        <option value="salarie">Salarié</option>
+        <option value="independant">Indépendant</option>
+        <option value="sansemploi">Sans emploi</option>
+        <option value="autre">Autre</option>
+      </select>
+
+      <label for="zone">Dans quelle zone géographique résidez-vous ?</label>
+      <select id="zone" name="zone" required>
+        <option value="urbaine">Zone urbaine</option>
+        <option value="rurale">Zone rurale / périurbaine</option>
+      </select>
+
+      <!-- Partie 2 – Habitudes -->
+      <label for="frequence">À quelle fréquence allez-vous chez McDonald's ?</label>
+      <select id="frequence" name="frequence" required>
+        <option value="plusieurs">Plusieurs fois par semaine</option>
+        <option value="semaine">Environ une fois par semaine</option>
+        <option value="1-3mois">1 à 3 fois par mois</option>
+        <option value="moinsmois">Moins d’une fois par mois</option>
+        <option value="jamais">Jamais</option>
+      </select>
+
+      <label for="depense">Quelle est votre dépense moyenne lors d’une visite chez McDonald's ?</label>
+      <select id="depense" name="depense" required>
+        <option value="moins8">Moins de 8 €</option>
+        <option value="8-12">8 à 12 €</option>
+        <option value="13-17">13 à 17 €</option>
+        <option value="plus17">Plus de 17 €</option>
+      </select>
+
+      <label for="moment">À quel moment de la journée allez-vous le plus souvent chez McDonald's ?</label>
+      <select id="moment" name="moment" required>
+        <option value="midi">Le midi</option>
+        <option value="soir">Le soir</option>
+        <option value="finsoiree">En fin de soirée</option>
+        <option value="weekend">En week-end</option>
+        <option value="autre">Autre</option>
+      </select>
+
+      <label for="motivation">Quelles sont vos motivations lorsque vous allez chez McDonald's ?</label>
+      <select id="motivation" name="motivation" required>
+        <option value="prix">Prix abordable</option>
+        <option value="rapidite">Rapidité du service</option>
+        <option value="gout">Goût / plaisir</option>
+        <option value="habitude">Habitude</option>
+        <option value="accessibilite">Accessibilité (proximité)</option>
+        <option value="autre">Autre</option>
+      </select>
+
+      <label for="consommation">Lorsque vous consommez chez McDonald's, préférez-vous :</label>
+      <select id="consommation" name="consommation" required>
+        <option value="surplace">Manger sur place</option>
+        <option value="emporter">Prendre à emporter</option>
+        <option value="drive">Utiliser le drive</option>
+        <option value="application">Commander via l’application</option>
+      </select>
+
+      <!-- Partie 3 – Perception -->
+      <label for="prix">Trouvez-vous que les prix chez McDonald's ont augmenté ces dernières années ?</label>
+      <select id="prix" name="prix" required>
+        <option value="beaucoup">Oui, beaucoup</option>
+        <option value="unpeu">Oui, un peu</option>
+        <option value="non">Non, pas vraiment</option>
+        <option value="ne_sais_pas">Je ne sais pas</option>
+      </select>
+
+      <label for="qualiteprix">Trouvez-vous que le rapport qualité/prix chez McDonald's est :</label>
+      <select id="qualiteprix" name="qualiteprix" required>
+        <option value="excellent">Excellent</option>
+        <option value="bon">Bon</option>
+        <option value="moyen">Moyen</option>
+        <option value="mauvais">Mauvais</option>
+      </select>
+
+      <label for="application">Utilisez-vous l’application McDo+ pour commander ou profiter d’offres ?</label>
+      <select id="application" name="application" required>
+        <option value="regulierement">Oui, régulièrement</option>
+        <option value="parfois">Oui, de temps en temps</option>
+        <option value="jamais">Non, jamais</option>
+      </select>
+
+      <label for="fidelite">Êtes-vous fidèle à McDonald's (par rapport aux autres fast-foods) ?</label>
+      <select id="fidelite" name="fidelite" required>
+        <option value="exclusivement">Oui, exclusivement</option>
+        <option value="aussiailleurs">Oui, mais j’y vais aussi ailleurs</option>
+        <option value="varie">Non, je varie souvent</option>
+      </select>
+
+      <label for="adaptation">Pensez-vous que McDonald's propose une offre adaptée aux attentes actuelles ?</label>
+      <select id="adaptation" name="adaptation" required>
+        <option value="toutafait">Oui tout à fait</option>
+        <option value="plutotoui">Plutôt oui</option>
+        <option value="plutotnon">Plutôt non</option>
+        <option value="pasdutout">Pas du tout</option>
+      </select>
+
+      <!-- Partie 4 – Collaboration Willy Wonka -->
+      <label for="achat">Seriez-vous prêt à acheter ce produit ?</label>
+      <select id="achat" name="achat" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+
+      <label for="prixchocolat">À quel prix seriez-vous prêt à acheter ce produit ?</label>
+      <select id="prixchocolat" name="prixchocolat" required>
+        <option value="menu+2">Prix du menu + 2 €</option>
+        <option value="menu+3">Prix du menu + 3 €</option>
+        <option value="menu+4">Prix du menu + 4 €</option>
+      </select>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <!-- Script de randomisation -->
+  <script>
+    const images = [
+      "McDo.png",       // image tablette McDo seule
+      "partenariat.png" // image tablette partenariat Wonka
+    ];
+    const randomIndex = Math.floor(Math.random() * images.length);
+    document.getElementById("testImage").src = images[randomIndex];
+  </script>
+</body>
+</html>
+
+
+ 
+
+
