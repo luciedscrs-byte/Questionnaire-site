@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Questionnaire McDonald's</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo McDonald's -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/McDonald's_logo.svg" 
+         alt="Logo McDonald's" class="logo">
+
+    <h1>Questionnaire McDonald's</h1>
+    <p>Merci de prendre quelques minutes pour répondre.</p>
+
+    <!-- Zone d'image randomisée -->
+    <div class="image-test">
+      <img id="testImage" alt="Image de la tablette" />
+    </div>
+
+    <form action="https://formspree.io/f/mrbrbopl" method="POST">
+      <!-- … toutes tes questions comme avant … -->
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <!-- Script de randomisation -->
+  <script>
+    const images = [
+      "McDo.png", // image tablette McDo seule
+      "partenariat.png" // image tablette partenariat Wonka
+    ];
+    const randomIndex = Math.floor(Math.random() * images.length);
+    document.getElementById("testImage").src = images[randomIndex];
+  </script>
+</body>
+</html>
+
