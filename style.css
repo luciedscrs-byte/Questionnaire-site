@@ -1,0 +1,56 @@
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #fff8f0;
+  margin: 0;
+  color: #222;
+}
+
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 120px;
+}
+
+h1 {
+  text-align: center;
+  color: #d32f2f; /* Rouge McDo */
+}
+
+label {
+  font-weight: 600;
+  margin-top: 12px;
+  display: block;
+}
+
+select, input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 14px;
+  background: #fbc02d; /* Jaune McDo */
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #f9a825;
+}
