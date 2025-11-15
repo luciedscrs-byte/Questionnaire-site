@@ -1,95 +1,105 @@
+/* Import d'une police conviviale et arrondie */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
+
 body {
-  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-  background: linear-gradient(135deg, #66bb6a, #fbc02d);
+  font-family: 'Baloo 2', Arial, sans-serif;
+  background-color: #ffffff; /* fond blanc */
+  color: #333;
   margin: 0;
-  color: #222;
+  padding: 0;
 }
 
-/* Conteneur principal */
 .container {
-  max-width: 720px;
-  margin: 40px auto;
-  background: rgba(255,255,255,0.95);
-  padding: 32px;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  animation: fadeIn 0.8s ease-in-out;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Titre */
 h1 {
+  color: #006633; /* vert sapin McDo France */
   text-align: center;
-  color: #2e7d32;
-  font-size: 34px;
-  text-shadow: 2px 2px #fbc02d;
+  font-size: 2.2em;
+  margin-bottom: 20px;
 }
 
-/* Labels */
+p {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
 label {
-  font-weight: 600;
-  margin-top: 14px;
   display: block;
-  color: #2e7d32;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #006633;
 }
 
-/* Champs */
-select, input, textarea {
+select, input[type="checkbox"], input[type="radio"] {
+  margin: 5px 0;
+}
+
+select {
   width: 100%;
-  padding: 12px;
-  border: 2px solid #2e7d32;
-  border-radius: 12px;
-  margin-top: 6px;
-  font-size: 16px;
-  background: #f1f8e9;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  padding: 8px;
+  border: 2px solid #006633;
+  border-radius: 6px;
+  font-size: 1em;
 }
 
-select:focus, input:focus, textarea:focus {
-  box-shadow: 0 0 10px #fbc02d;
-  transform: scale(1.02);
+.checkbox-group label {
+  display: block; /* chaque case en dessous */
+  margin-bottom: 8px;
+  font-weight: normal;
+  color: #333;
 }
 
-textarea { resize: vertical; }
-
-/* Bouton */
 button {
-  margin-top: 24px;
-  padding: 14px;
-  background: #fbc02d;
-  color: #222;
+  background-color: #FFC72C; /* jaune McDo France */
+  color: #006633; /* texte vert sapin */
   border: none;
-  border-radius: 14px;
-  font-size: 18px;
+  padding: 12px 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+  margin-top: 20px;
+  width: 100%;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background: #f9a825;
-  transform: scale(1.08);
+  background-color: #ffdb4d; /* jaune plus clair au survol */
 }
 
-/* Image randomisée */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th {
+  background-color: #006633; /* vert sapin */
+  color: white;
+  padding: 10px;
+}
+
+table td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.image-test {
+  text-align: center;
+  margin: 20px 0;
+}
+
 #testImage {
-  display: block;
-  margin: 0 auto 24px;
-  max-width: 280px;
+  max-width: 100%;
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-  animation: popIn 0.6s ease;
+  border: 3px solid #FFC72C; /* cadre jaune */
+  border-radius: 10px;
+  padding: 5px;
 }
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes popIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-
-
