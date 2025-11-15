@@ -121,7 +121,7 @@
         <option value="non">Non</option>
       </select>
 
-      <!-- Q12 -->
+      <!-- Q12 : tableau prix psychologique -->
       <label>Pour chaque question, veuillez indiquer le montant supplémentaire le plus juste selon vous :</label>
       <table border="1" cellpadding="8" cellspacing="0">
         <tr>
@@ -135,7 +135,7 @@
           <th>4 €</th>
         </tr>
         <tr>
-          <td>A partir de quel montant supplémentaire trouvez-vous l'offre trop chère ?</td>
+          <td>À partir de quel montant supplémentaire trouvez-vous l'offre trop chère ?</td>
           <td><input type="radio" name="tropChere" value="1"></td>
           <td><input type="radio" name="tropChere" value="1.5"></td>
           <td><input type="radio" name="tropChere" value="2"></td>
@@ -145,7 +145,7 @@
           <td><input type="radio" name="tropChere" value="4"></td>
         </tr>
         <tr>
-          <td>A partir de quel montant supplémentaire trouvez-vous l'offre chère mais acceptable ?</td>
+          <td>À partir de quel montant supplémentaire trouvez-vous l'offre chère mais acceptable ?</td>
           <td><input type="radio" name="acceptable" value="1"></td>
           <td><input type="radio" name="acceptable" value="1.5"></td>
           <td><input type="radio" name="acceptable" value="2"></td>
@@ -155,8 +155,94 @@
           <td><input type="radio" name="acceptable" value="4"></td>
         </tr>
         <tr>
-          <td>A partir de quel montant supplémentaire trouvez-vous l'offre bon marché ?</td>
+          <td>À partir de quel montant supplémentaire trouvez-vous l'offre bon marché ?</td>
           <td><input type="radio" name="bonMarche" value="1"></td>
           <td><input type="radio" name="bonMarche" value="1.5"></td>
           <td><input type="radio" name="bonMarche" value="2"></td>
-          <td><input type="radio
+          <td><input type="radio" name="bonMarche" value="2.5"></td>
+          <td><input type="radio" name="bonMarche" value="3"></td>
+          <td><input type="radio" name="bonMarche" value="3.5"></td>
+          <td><input type="radio" name="bonMarche" value="4"></td>
+        </tr>
+        <tr>
+          <td>À partir de quel montant supplémentaire trouvez-vous l'offre trop bon marché ?</td>
+          <td><input type="radio" name="tropBonMarche" value="1"></td>
+          <td><input type="radio" name="tropBonMarche" value="1.5"></td>
+          <td><input type="radio" name="tropBonMarche" value="2"></td>
+          <td><input type="radio" name="tropBonMarche" value="2.5"></td>
+          <td><input type="radio" name="tropBonMarche" value="3"></td>
+          <td><input type="radio" name="tropBonMarche" value="3.5"></td>
+          <td><input type="radio" name="tropBonMarche" value="4"></td>
+        </tr>
+      </table>
+
+      <!-- Q13 -->
+      <label>Genre</label>
+      <select name="genre" required>
+        <option value="femme">Femme</option>
+        <option value="homme">Homme</option>
+        <option value="nonBinaire">Non-binaire</option>
+        <option value="prefereNePasRepondre">Préfère ne pas répondre</option>
+      </select>
+
+      <!-- Q14 -->
+      <label>Âge</label>
+      <select name="age" required>
+        <option value="18-25">18-25</option>
+        <option value="26-35">26-35</option>
+        <option value="36-45">36-45</option>
+        <option value="46-55">46-55</option>
+        <option value="56+">56+</option>
+      </select>
+
+      <!-- Q15 -->
+      <label>Situation professionnelle</label>
+      <select name="situation" required>
+        <option value="etudiant">Étudiant</option>
+        <option value="salarié">Salarié</option>
+        <option value="independant">Indépendant</option>
+        <option value="sansEmploi">Sans emploi</option>
+        <option value="retraite">Retraité</option>
+      </select>
+
+      <!-- Q16 -->
+      <label>Zone de résidence</label>
+      <select name="zone" required>
+        <option value="urbaine">Urbaine</option>
+        <option value="periurbaine">Périurbaine</option>
+        <option value="rurale">Rurale</option>
+      </select>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <!-- Script: image aléatoire + suivi + limite 2 motivations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Randomiser l'image et enregistrer son nom
+      const images = ["McDo.png", "partenariat.png"];
+      const randomIndex = Math.floor(Math.random() * images.length);
+      const imgEl = document.getElementById("testImage");
+      const hiddenInput = document.getElementById("imageName");
+      if (imgEl && hiddenInput) {
+        imgEl.src = images[randomIndex];
+        hiddenInput.value = images[randomIndex];
+      }
+
+      // Limiter à 2 cases cochées pour les motivations
+      const motivationCheckboxes = document.querySelectorAll('input[name="motivations[]"]');
+      motivationCheckboxes.forEach(cb => {
+        cb.addEventListener('change', (e) => {
+          const checked = Array.from(motivationCheckboxes).filter(x => x.checked);
+          if (checked.length > 2) {
+            e.target.checked = false;
+            alert("Vous ne pouvez sélectionner que 2 motivations maximum.");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
