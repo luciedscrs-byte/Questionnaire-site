@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Questionnaire McDonald's</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Optionnel: garanti une taille pour l'image et un cadre visible */
+    .image-test { margin: 16px 0; text-align: center; }
+    #testImage { max-width: 100%; height: auto; border: 1px solid #ddd; padding: 8px; }
+    .checkbox-group label { display: inline-block; margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Questionnaire McDonald's</h1>
+    <p>
+      Dans le cadre d'un projet d'étude en master marketing vente, nous réalisons une enquête sur les
+      habitudes de consommation chez McDonald's. Votre participation nous serait très utile afin
+      d'avoir un nombre de réponses suffisant pour réaliser notre étude. Cela vous prendra moins de 5
+      minutes, et les réponses sont anonymes. Merci à vous !
+    </p>
+
+    <form id="questionnaire" action="https://formspree.io/f/mrbrbopl" method="POST">
+
+      <!-- Q1 -->
+      <label>Êtes-vous un consommateur régulier de McDonald's ?</label>
+      <select name="consommateur" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+
+      <!-- Q2 -->
+      <label>À quelle fréquence allez-vous chez McDonald's ?</label>
+      <select name="frequence" required>
+        <option value="1semaine">1 fois par semaine</option>
+        <option value="plusieurssemaine">Plusieurs fois par semaine</option>
+        <option value="1mois">1 fois par mois</option>
+        <option value="plusieursmois">Plusieurs fois par mois</option>
+        <option value="annee">Quelques fois dans l'année</option>
+        <option value="jamais">Jamais</option>
+      </select>
+
+      <!-- Q3 -->
+      <label>Avez-vous un compte sur l'application McDo+ ?</label>
+      <select name="compteMcDo" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+
+      <!-- Q4 (checkboxes avec limite à 2) -->
+      <label>Quelles sont vos motivations lorsque vous allez chez McDonald's ? (2 réponses possibles)</label>
+      <div id="motivationsGroup" class="checkbox-group">
+        <label><input type="checkbox" name="motivations[]" value="prix"> Prix abordables</label><br>
+        <label><input type="checkbox" name="motivations[]" value="offres"> Offres du moment</label><br>
+        <label><input type="checkbox" name="motivations[]" value="rapidite"> Rapidité du service</label><br>
+        <label><input type="checkbox" name="motivations[]" value="gout"> Goût / plaisir</label><br>
+        <label><input type="checkbox" name="motivations[]" value="habitude"> Habitude</label><br>
+        <label><input type="checkbox" name="motivations[]" value="collaborations"> Collaborations / partenariats</label>
+	<label><input type="checkbox" name="motivations[]" value="accessibilite"> Accessibilité / proximité</label>
+      </div>
+
+      <!-- Q5 -->
+      <label>Que pensez-vous du rapport qualité/prix chez McDonald's aujourd'hui ?</label>
+      <select name="qualiteprix" required>
+        <option value="tresSatisfaisant">Très satisfaisant</option>
+        <option value="satisfaisant">Satisfaisant</option>
+        <option value="peuSatisfaisant">Peu satisfaisant</option>
+        <option value="tresPeuSatisfaisant">Très peu satisfaisant</option>
+      </select>
+
+      <!-- Q6 -->
+      <label>Les prix de McDonald's sont moins intéressants de nos jours :</label>
+      <select name="prixMoinsInteressants" required>
+        <option value="toutafait">Tout à fait d'accord</option>
+        <option value="plutot">Plutôt d'accord</option>
+        <option value="daccord">D'accord</option>
+        <option value="plutotpas">Plutôt pas d'accord</option>
+        <option value="pasdutout">Pas du tout d'accord</option>
+      </select>
+
+      <!-- Q7 -->
+      <label>Quelle est votre dépense moyenne lorsque vous consommez chez McDonald's ?</label>
+      <select name="depense" required>
+        <option value="moins8">Moins de 8 €</option>
+        <option value="8-12">Entre 8 et 12 €</option>
+        <option value="13-17">Entre 13 et 17 €</option>
+        <option value="plus17">Plus de 17 €</option>
+      </select>
+
+      <!-- Q8 -->
+      <label>Avez-vous l'habitude de prendre un dessert lorsque vous allez chez McDonald's ?</label>
+      <select name="dessert" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+
+      <!-- IMAGE RANDOMISÉE (entre Q8 et Q9) -->
+      <div class="image-test">
+        <img id="testImage" alt="Image de la tablette (McDo ou Partenariat)">
+      </div>
+
+      <!-- Q9 -->
+      <label>Quelle impression générale cette affiche vous donne-t-elle au premier regard ?</label>
+      <select name="impression" required>
+        <option value="tresPositive">Très positive</option>
+        <option value="plutotPositive">Plutôt positive</option>
+        <option value="neutre">Neutre</option>
+        <option value="plutotNegative">Plutôt négative</option>
+        <option value="tresNegative">Très négative</option>
+      </select>
+
+      <!-- Q10 -->
+      <label>Est-ce que ce type d'offre renforcerait votre envie d'aller à McDonald's ?</label>
+      <select name="envie" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+
+      <!-- Q11 -->
+      <label>Auriez-vous envie de consommer cette tablette de chocolat ?</label>
+      <select name="consommerTablette" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+
+      <!-- Q12 -->
+      <label>Pour chaque question, veuillez indiquer le montant supplémentaire le plus juste selon vous :</label>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+          <th></th>
+          <th>1 €</th>
+          <th>1,50 €</th>
+          <th>2 €</th>
+          <th>2,50 €</th>
+          <th>3 €</th>
+          <th>3,50 €</th>
+          <th>4 €</th>
+        </tr>
+        <tr>
+          <td>A partir de quel montant supplémentaire trouvez-vous l'offre trop chère ?</td>
+          <td><input type="radio" name="tropChere" value="1"></td>
+          <td><input type="radio" name="tropChere" value="1.5"></td>
+          <td><input type="radio" name="tropChere" value="2"></td>
+          <td><input type="radio" name="tropChere" value="2.5"></td>
+          <td><input type="radio" name="tropChere" value="3"></td>
+          <td><input type="radio" name="tropChere" value="3.5"></td>
+          <td><input type="radio" name="tropChere" value="4"></td>
+        </tr>
+        <tr>
+          <td>A partir de quel montant supplémentaire trouvez-vous l'offre chère mais acceptable ?</td>
+          <td><input type="radio" name="acceptable" value="1"></td>
+          <td><input type="radio" name="acceptable" value="1.5"></td>
+          <td><input type="radio" name="acceptable" value="2"></td>
+          <td><input type="radio" name="acceptable" value="2.5"></td>
+          <td><input type="radio" name="acceptable" value="3"></td>
+          <td><input type="radio" name="acceptable" value="3.5"></td>
+          <td><input type="radio" name="acceptable" value="4"></td>
+        </tr>
+        <tr>
+          <td>A partir de quel montant supplémentaire trouvez-vous l'offre bon marché ?</td>
+          <td><input type="radio" name="bonMarche" value="1"></td>
+          <td><input type="radio" name="bonMarche" value="1.5"></td>
+          <td><input type="radio" name="bonMarche" value="2"></td>
+          <td><input type="radio" name="bonMarche" value="2.5"></td>
+          <td><input type="radio" name="bonMarche" value="3"></td>
+          <td><input type="radio" name="bonMarche" value="3.5"></td>
+          <td><input type="radio" name="bonMarche" value="4"></td>
+        </tr>
+        <tr>
+          <td>A partir de quel montant supplémentaire trouvez-vous l'offre trop bon marché ?</td>
+          <td><input type="radio" name="tropBonMarche" value="1"></td>
+          <td><input type="radio" name="tropBonMarche" value="1.5"></td>
+          <td><input type="radio" name="tropBonMarche" value="2"></td>
+          <td><input type="radio" name="tropBonMarche" value="2.5"></td>
+          <td><input type="radio" name="tropBonMarche" value="3"></td>
+          <td><input type="radio" name="tropBonMarche" value="3.5"></td>
+          <td><input type="radio" name="tropBonMarche" value="4"></td>
+        </tr>
+      </table>
+
+      <!-- Q13 -->
+      <label>Quel est votre genre ?</label>
+      <select name="genre" required>
+        <option value="femme">Femme</option>
+        <option value="homme">Homme</option>
+        <option value="autre">Autre</option>
+      </select>
+
+      <!-- Q14 -->
+      <label>Quel est votre âge ?</label>
+      <select name="age" required>
+        <option value="moins18">Moins de 18 ans</option>
+        <option value="18-25">Entre 18 et 25 ans</option>
+        <option value="26-35">Entre 26 et 35 ans</option>
+        <option value="36-45">Entre 36 et 45 ans</option>
+        <option value="46plus">46 ans et plus</option>
+      </select>
+
+      <!-- Q15 -->
+      <label>Quelle est votre situation actuelle ?</label>
+      <select name="situation" required>
+        <option value="lyceen">Collégien / lycéen</option>
+        <option value="etudiant">Étudiant</option>
+        <option value="salarie">Salarié</option>
+        <option value="independant">Indépendant</option>
+        <option value="sansemploi">Sans emploi</option>
+        <option value="autre">Autre</option>
+      </select>
+
+      <!-- Q16 -->
+      <label>Dans quelle zone géographique résidez-vous ?</label>
+      <select name="zone" required>
+        <option value="urbaine">Zone urbaine</option>
+        <option value="rurale">Zone rurale / périurbaine</option>
+      </select>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <!-- Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1) Image randomisée
+      const images = ["McDo.png", "partenariat.png"]; // Vérifie que ces fichiers existent au même niveau que index.html
+      const imgEl = document.getElementById("testImage");
+      const randomIndex = Math.floor(Math.random() * images.length);
+      imgEl.src = images[randomIndex];
+      imgEl.onerror = () => {
+        console.warn("Image introuvable: " + imgEl.src);
+        imgEl.alt = "Image non trouvée. Vérifiez le nom et l'emplacement du fichier.";
+      };
+
+      // 2) Limiter à 2 cases cochées pour les motivations
+      const motivationCheckboxes = document.querySelectorAll('#motivationsGroup input[type="checkbox"]');
+      motivationCheckboxes.forEach(cb => {
+        cb.addEventListener('change', (e) => {
+          const checked = Array.from(motivationCheckboxes).filter(x => x.checked);
+          if (checked.length > 2) {
+            e.target.checked = false;
+            alert("Vous ne pouvez sélectionner que 2 motivations maximum.");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
