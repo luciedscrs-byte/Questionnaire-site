@@ -3,29 +3,38 @@
 
 body {
   font-family: 'Baloo 2', Arial, sans-serif;
-  background-color: #ffffff; /* fond blanc */
+  background-color: #fffbea; /* fond crème léger */
   color: #333;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
+/* Bandeau haut vert sapin */
 h1 {
-  color: #006633; /* vert sapin McDo France */
+  background-color: #006633; /* vert sapin McDo France */
+  color: #FFC72C; /* jaune McDo France */
   text-align: center;
   font-size: 2.2em;
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 20px;
+  border-bottom: 5px solid #FFC72C;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 3px solid #006633;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 102, 51, 0.3);
 }
 
 p {
   text-align: center;
   font-size: 1.1em;
   margin-bottom: 30px;
+  color: #006633;
 }
 
 label {
@@ -36,20 +45,17 @@ label {
   color: #006633;
 }
 
-select, input[type="checkbox"], input[type="radio"] {
-  margin: 5px 0;
-}
-
 select {
   width: 100%;
   padding: 8px;
-  border: 2px solid #006633;
+  border: 2px solid #FFC72C;
   border-radius: 6px;
   font-size: 1em;
+  background-color: #fffbea;
 }
 
 .checkbox-group label {
-  display: block; /* chaque case en dessous */
+  display: block;
   margin-bottom: 8px;
   font-weight: normal;
   color: #333;
@@ -66,11 +72,12 @@ button {
   cursor: pointer;
   margin-top: 20px;
   width: 100%;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: #ffdb4d; /* jaune plus clair au survol */
+  background-color: #006633; /* vert sapin au survol */
+  color: #FFC72C; /* texte jaune */
 }
 
 table {
@@ -81,14 +88,14 @@ table {
 
 table th {
   background-color: #006633; /* vert sapin */
-  color: white;
+  color: #FFC72C; /* jaune */
   padding: 10px;
 }
 
 table td {
   text-align: center;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #FFC72C;
 }
 
 .image-test {
@@ -99,7 +106,9 @@ table td {
 #testImage {
   max-width: 100%;
   height: auto;
-  border: 3px solid #FFC72C; /* cadre jaune */
+  border: 5px solid #006633; /* cadre vert sapin */
   border-radius: 10px;
   padding: 5px;
+  background-color: #FFC72C; /* fond jaune derrière l’image */
 }
+
