@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Questionnaire Craq'n'Mac</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>Questionnaire Craq'n'Mac</h1>
+    <p>
+      Dans le cadre d'un projet d'étude en master marketing vente, nous réalisons une enquête sur les
+      habitudes de consommation chez McDonald's. Votre participation nous serait très utile afin
+      d'avoir un nombre de réponses suffisant pour réaliser notre étude. Cela vous prendra moins de 5
+      minutes, et les réponses sont anonymes. Merci à vous !
+    </p>
+
+    <form action="https://formspree.io/f/mrbrbopl" method="POST">
+
+      <!-- Q1 -->
+      <label>Êtes-vous un consommateur régulier de McDonald's ?</label>
+      <select name="consommateur" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+
+      <!-- Q2 -->
+      <label>À quelle fréquence allez-vous chez McDonald's ?</label>
+      <select name="frequence" required>
+        <option value="1semaine">1 fois par semaine</option>
+        <option value="plusieurssemaine">Plusieurs fois par semaine</option>
+        <option value="1mois">1 fois par mois</option>
+        <option value="plusieursmois">Plusieurs fois par mois</option>
+        <option value="annee">Quelques fois dans l'année</option>
+        <option value="jamais">Jamais</option>
+      </select>
+
+      <!-- Q3 -->
+      <label>Avez-vous un compte sur l'application McDo+ ?</label>
+      <select name="compteMcDo" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+
+      <!-- Q4 (checkboxes pour 2 réponses possibles) -->
+      <label>Quelles sont vos motivations lorsque vous allez chez McDonald's ? (2 réponses possibles)</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="motivations" value="prix"> Prix abordables</label><br>
+        <label><input type="checkbox" name="motivations" value="offres"> Offres du moment</label><br>
+        <label><input type="checkbox" name="motivations" value="rapidite"> Rapidité du service</label><br>
+        <label><input type="checkbox" name="motivations" value="gout"> Goût / plaisir</label><br>
+        <label><input type="checkbox" name="motivations" value="habitude"> Habitude</label><br>
+        <label><input type="checkbox" name="motivations" value="collaborations"> Collaborations / partenariat</label>
+      </div>
+
+      <!-- Q5 -->
+      <label>Que pensez-vous du rapport qualité/prix chez McDonald's aujourd'hui ?</label>
+      <select name="qualiteprix" required>
+        <option value="tresSatisfaisant">Très satisfaisant</option>
+        <option value="satisfaisant">Satisfaisant</option>
+        <option value="peuSatisfaisant">Peu satisfaisant</option>
+        <option value="tresPeuSatisfaisant">Très peu satisfaisant</option>
+      </select>
+
+      <!-- Q6 -->
+      <label>Les prix de McDonald's sont moins intéressants de nos jours :</label>
+      <select name="prixMoinsInteressants" required>
+        <option value="toutafait">Tout à fait d'accord</option>
+        <option value="plutot">Plutôt d'accord</option>
+        <option value="daccord">D'accord</option>
+        <option value="plutotpas">Plutôt pas d'accord</option>
+        <option value="pasdutout">Pas du tout d'accord</option>
+      </select>
+
+      <!-- Q7 -->
+      <label>Quelle est votre dépense moyenne lorsque vous consommez chez McDonald's ?</label>
+      <select name="depense" required>
+        <option value="moins8">Moins de 8 €</option>
+        <option value="8-12">Entre 8 et 12 €</option>
+        <option value="13-17">Entre 13 et 17 €</option>
+        <option value="plus17">Plus de 17 €</option>
+      </select>
+
+      <!-- Q8 -->
+      <label>Avez-vous l'habitude de prendre un dessert lorsque vous allez chez McDonald's ?</label>
+      <select name="dessert" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+
+      <!-- IMAGE RANDOMISÉE (entre Q8 et Q9) -->
+      <div class="image-test">
+        <img id="testImage" alt="Image de la tablette" />
+      </div>
+
+      <!-- Q9 -->
+      <label>Quelle impression générale cette affiche vous donne-t-elle au premier regard ?</label>
+      <select name="impression" required>
+        <option value="tresPositive">Très positive</option>
+        <option value="plutotPositive">Plutôt positive</option>
+        <option value="neutre">Neutre</option>
+        <option value="plutotNegative">Plutôt négative</option>
+        <option value="tresNegative">Très négative</option>
+      </select>
+
+      <!-- Q10 -->
+      <label>Est-ce que ce type d'offre renforcerait votre envie d'aller à McDonald's ?</label>
+      <select name="envie" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+
+      <!-- Q11 -->
+      <label>Auriez-vous envie de consommer cette tablette de chocolat ?</label>
+      <select name="consommerTablette" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+
+      <!-- Q12 -->
+      <label>À quel prix seriez-vous prêt(e) à acheter cette tablette de chocolat ?</label>
+      <select name="prixTablette" required>
+        <option value="1">1 €</option>
+        <option value="1.5">1,50 €</option>
+        <option value="2">2 €</option>
+        <option value="2.5">2,50 €</option>
+        <option value="3">3 €</option>
+        <option value="3.5">3,50 €</option>
+        <option value="4">4 €</option>
+      </select>
+
+      <!-- Q13 -->
+      <label>Quel est votre genre ?</label>
+      <select name="genre" required>
+        <option value="femme">Femme</option>
+        <option value="homme">Homme</option>
+        <option value="autre">Autre</option>
+      </select>
+
+      <!-- Q14 -->
+      <label>Quel est votre âge ?</label>
+      <select name="age" required>
+        <option value="moins18">Moins de 18 ans</option>
+        <option value="18-25">Entre 18 et 25 ans</option>
+        <option value="26-35">Entre 26 et 35 ans</option>
+        <option value="36-45">Entre 36 et 45 ans</option>
+        <option value="46plus">46 ans et plus</option>
+      </select>
+
+      <!-- Q15 -->
+      <label>Quelle est votre situation actuelle ?</label>
+      <select name="situation" required>
+        <option value="lyceen">Collégien / lycéen</option>
+        <option value="etudiant">Étudiant</option>
+        <option value="salarie">Salarié</option>
+        <option value="independant">Indépendant</option>
+        <option value="sansemploi">Sans emploi</option>
+        <option value="autre">Autre</option>
+      </select>
+
+      <!-- Q16 -->
+      <label>Dans quelle zone géographique résidez-vous ?</label>
+      <select name="zone" required>
+        <option value="urbaine">Zone urbaine</option>
+        <option value="rurale">Zone rurale / périurbaine</option>
+      </select>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <!-- Script de randomisation -->
+  <script>
+    const images = ["McDo.png", "partenariat.png"];
+    const randomIndex = Math.floor(Math.random() * images.length);
+    document.getElementById("testImage").src = images[randomIndex];
+  </script>
+</body>
+</html>
+
