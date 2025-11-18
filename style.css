@@ -9,6 +9,17 @@ body {
   padding: 0;
 }
 
+/* Bandeau haut vert sapin */
+h1 {
+  background-color: #006633; /* vert sapin McDo France */
+  color: #FFC72C; /* jaune McDo France */
+  text-align: center;
+  font-size: 2.2em;
+  margin: 0;
+  padding: 20px;
+  border-bottom: 5px solid #FFC72C;
+}
+
 .container {
   max-width: 800px;
   margin: 20px auto;
@@ -19,18 +30,6 @@ body {
   box-shadow: 0 0 15px rgba(0, 102, 51, 0.3);
 }
 
-/* TITRE */
-h1 {
-  background-color: #006633; /* vert sapin */
-  color: #FFC72C; /* jaune McDo France */
-  text-align: center;
-  font-size: 2.4em;
-  margin: 0;
-  padding: 20px;
-  border-bottom: 5px solid #FFC72C;
-}
-
-/* Texte introductif */
 p {
   text-align: center;
   font-size: 1.1em;
@@ -38,35 +37,33 @@ p {
   color: #006633;
 }
 
-/* QUESTIONS */
 label {
-  font-size: 1.3em;       /* police plus grande */
-  font-weight: bold;      /* texte en gras */
-  margin-top: 20px;       /* espace avant chaque question */
-  margin-bottom: 10px;    /* espace après la question */
   display: block;
-  color: #006633;         /* vert sapin */
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #006633;
 }
 
-/* RÉPONSES (cases, radios, menus) */
-input[type="checkbox"],
-input[type="radio"],
 select {
-  font-size: 1em;         /* taille normale */
-  margin: 5px 0;
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #FFC72C;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #fffbea;
 }
 
-/* Pour que les labels des réponses soient plus sobres */
-form label input {
-  font-size: 1em;
+.checkbox-group label {
+  display: block;
+  margin-bottom: 8px;
   font-weight: normal;
   color: #333;
 }
 
-/* Bouton */
 button {
-  background-color: #FFC72C;
-  color: #006633;
+  background-color: #FFC72C; /* jaune McDo France */
+  color: #006633; /* texte vert sapin */
   border: none;
   padding: 12px 20px;
   font-size: 1.1em;
@@ -79,11 +76,10 @@ button {
 }
 
 button:hover {
-  background-color: #006633;
-  color: #FFC72C;
+  background-color: #006633; /* vert sapin au survol */
+  color: #FFC72C; /* texte jaune */
 }
 
-/* Tableau Q12 */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -91,8 +87,8 @@ table {
 }
 
 table th {
-  background-color: #006633;
-  color: #FFC72C;
+  background-color: #006633; /* vert sapin */
+  color: #FFC72C; /* jaune */
   padding: 10px;
 }
 
@@ -102,7 +98,6 @@ table td {
   border: 1px solid #FFC72C;
 }
 
-/* Image */
 .image-test {
   text-align: center;
   margin: 20px 0;
@@ -111,8 +106,10 @@ table td {
 #testImage {
   max-width: 100%;
   height: auto;
-  border: 5px solid #006633;
+  border: 5px solid #006633; /* cadre vert sapin */
   border-radius: 10px;
   padding: 5px;
-  background-color: #FFC72C;
+  background-color: #FFC72C; /* fond jaune derrière l’image */
 }
+
+
