@@ -7,92 +7,122 @@
 </head>
 <body>
   <div class="container">
-    <h1>Questionnaire McDonald's</h1>
 
-    <form action="https://formspree.io/f/mrbrbopl" method="POST">
+    <h1>Questionnaire McDonald's</h1>
+    <p>
+      Dans le cadre d'un projet d'étude en master marketing vente, nous réalisons une enquête sur les
+      habitudes de consommation chez McDonald's. Votre participation nous serait très utile afin
+      d'avoir un nombre de réponses suffisant pour réaliser notre étude. Cela vous prendra moins de 5
+      minutes, et les réponses sont anonymes. Merci à vous !
+    </p>
+
+    <form action="https://formspree.io/f/mrbrykkp" method="POST">
 
       <!-- Q1 -->
-      <label>Êtes-vous un consommateur régulier de McDonald's ?</label><br>
-      <label><input type="checkbox" name="consommateur" value="oui" class="single-choice"> Oui</label><br>
-      <label><input type="checkbox" name="consommateur" value="non" class="single-choice"> Non</label><br>
+      <label>Êtes-vous un consommateur régulier de McDonald's ?</label>
+      <select name="consommateur" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
 
       <!-- Q2 -->
-      <label>À quelle fréquence allez-vous chez McDonald's ?</label><br>
-      <label><input type="checkbox" name="frequence" value="1semaine" class="single-choice"> 1 fois par semaine</label><br>
-      <label><input type="checkbox" name="frequence" value="plusieurssemaine" class="single-choice"> Plusieurs fois par semaine</label><br>
-      <label><input type="checkbox" name="frequence" value="1mois" class="single-choice"> 1 fois par mois</label><br>
-      <label><input type="checkbox" name="frequence" value="plusieursmois" class="single-choice"> Plusieurs fois par mois</label><br>
-      <label><input type="checkbox" name="frequence" value="annee" class="single-choice"> Quelques fois dans l'année</label><br>
-      <label><input type="checkbox" name="frequence" value="jamais" class="single-choice"> Jamais</label><br>
+      <label>À quelle fréquence allez-vous chez McDonald's ?</label>
+      <select name="frequence" required>
+        <option value="1semaine">1 fois par semaine</option>
+        <option value="plusieurssemaine">Plusieurs fois par semaine</option>
+        <option value="1mois">1 fois par mois</option>
+        <option value="plusieursmois">Plusieurs fois par mois</option>
+        <option value="annee">Quelques fois dans l'année</option>
+        <option value="jamais">Jamais</option>
+      </select>
 
       <!-- Q3 -->
-      <label>Avez-vous un compte sur l'application McDo+ ?</label><br>
-      <label><input type="checkbox" name="compteMcDo" value="oui" class="single-choice"> Oui</label><br>
-      <label><input type="checkbox" name="compteMcDo" value="non" class="single-choice"> Non</label><br>
+      <label>Avez-vous un compte sur l'application McDo+ ?</label>
+      <select name="compteMcDo" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
 
       <!-- Q4 -->
-      <label>Quelles sont vos motivations lorsque vous allez chez McDonald's ?</label><br>
-      <label><input type="checkbox" name="motivations[]" value="prix"> Prix abordables</label><br>
-      <label><input type="checkbox" name="motivations[]" value="offres"> Offres du moment</label><br>
-      <label><input type="checkbox" name="motivations[]" value="rapidite"> Rapidité du service</label><br>
-      <label><input type="checkbox" name="motivations[]" value="gout"> Goût / plaisir</label><br>
-      <label><input type="checkbox" name="motivations[]" value="habitude"> Habitude</label><br>
-      <label><input type="checkbox" name="motivations[]" value="collaborations"> Collaborations / partenariat</label><br>
-      <label><input type="checkbox" name="motivations[]" value="accessibilite"> Accessibilité / proximité</label><br>
+      <label>Quelles sont vos motivations lorsque vous allez chez McDonald's ? (2 réponses possibles)</label>
+      <div id="motivationsGroup" class="checkbox-group">
+        <label><input type="checkbox" name="motivations[]" value="prix"> Prix abordables</label><br>
+        <label><input type="checkbox" name="motivations[]" value="offres"> Offres du moment</label><br>
+        <label><input type="checkbox" name="motivations[]" value="rapidite"> Rapidité du service</label><br>
+        <label><input type="checkbox" name="motivations[]" value="gout"> Goût / plaisir</label><br>
+        <label><input type="checkbox" name="motivations[]" value="habitude"> Habitude</label><br>
+        <label><input type="checkbox" name="motivations[]" value="collaborations"> Collaborations / partenariat</label><br>
+        <label><input type="checkbox" name="motivations[]" value="accessibilite"> Accessibilité / proximité</label>
+      </div>
 
       <!-- Q5 -->
-      <label>Que pensez-vous du rapport qualité/prix chez McDonald's aujourd'hui ?</label><br>
-      <label><input type="checkbox" name="qualiteprix" value="tresSatisfaisant" class="single-choice"> Très satisfaisant</label><br>
-      <label><input type="checkbox" name="qualiteprix" value="satisfaisant" class="single-choice"> Satisfaisant</label><br>
-      <label><input type="checkbox" name="qualiteprix" value="peuSatisfaisant" class="single-choice"> Peu satisfaisant</label><br>
-      <label><input type="checkbox" name="qualiteprix" value="tresPeuSatisfaisant" class="single-choice"> Très peu satisfaisant</label><br>
+      <label>Que pensez-vous du rapport qualité/prix chez McDonald's aujourd'hui ?</label>
+      <select name="qualiteprix" required>
+        <option value="tresSatisfaisant">Très satisfaisant</option>
+        <option value="satisfaisant">Satisfaisant</option>
+        <option value="peuSatisfaisant">Peu satisfaisant</option>
+        <option value="tresPeuSatisfaisant">Très peu satisfaisant</option>
+      </select>
 
       <!-- Q6 -->
-      <label>Les prix de McDonald's sont moins intéressants de nos jours :</label><br>
-      <label><input type="checkbox" name="prixMoinsInteressants" value="toutafait" class="single-choice"> Tout à fait d'accord</label><br>
-      <label><input type="checkbox" name="prixMoinsInteressants" value="plutot" class="single-choice"> Plutôt d'accord</label><br>
-      <label><input type="checkbox" name="prixMoinsInteressants" value="daccord" class="single-choice"> D'accord</label><br>
-      <label><input type="checkbox" name="prixMoinsInteressants" value="plutotpas" class="single-choice"> Plutôt pas d'accord</label><br>
-      <label><input type="checkbox" name="prixMoinsInteressants" value="pasdutout" class="single-choice"> Pas du tout d'accord</label><br>
+      <label>Les prix de McDonald's sont moins intéressants de nos jours :</label>
+      <select name="prixMoinsInteressants" required>
+        <option value="toutafait">Tout à fait d'accord</option>
+        <option value="plutot">Plutôt d'accord</option>
+        <option value="daccord">D'accord</option>
+        <option value="plutotpas">Plutôt pas d'accord</option>
+        <option value="pasdutout">Pas du tout d'accord</option>
+      </select>
 
       <!-- Q7 -->
-      <label>Quelle est votre dépense moyenne lorsque vous consommez chez McDonald's ?</label><br>
-      <label><input type="checkbox" name="depense" value="moins8" class="single-choice"> Moins de 8 €</label><br>
-      <label><input type="checkbox" name="depense" value="8-12" class="single-choice"> Entre 8 et 12 €</label><br>
-      <label><input type="checkbox" name="depense" value="13-17" class="single-choice"> Entre 13 et 17 €</label><br>
-      <label><input type="checkbox" name="depense" value="plus17" class="single-choice"> Plus de 17 €</label><br>
+      <label>Quelle est votre dépense moyenne lorsque vous consommez chez McDonald's ?</label>
+      <select name="depense" required>
+        <option value="moins8">Moins de 8 €</option>
+        <option value="8-12">Entre 8 et 12 €</option>
+        <option value="13-17">Entre 13 et 17 €</option>
+        <option value="plus17">Plus de 17 €</option>
+      </select>
 
       <!-- Q8 -->
-      <label>Avez-vous l'habitude de prendre un dessert lorsque vous allez chez McDonald's ?</label><br>
-      <label><input type="checkbox" name="dessert" value="oui" class="single-choice"> Oui</label><br>
-      <label><input type="checkbox" name="dessert" value="non" class="single-choice"> Non</label><br>
+      <label>Avez-vous l'habitude de prendre un dessert lorsque vous allez chez McDonald's ?</label>
+      <select name="dessert" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
 
       <!-- IMAGE RANDOMISÉE -->
       <div class="image-test">
         <img id="testImage" alt="Image de la tablette (McDo ou Partenariat)">
       </div>
+      <!-- Champ caché pour stocker le nom de l'image -->
       <input type="hidden" id="imageName" name="imageName" value="">
 
       <!-- Q9 -->
-      <label>Quelle impression générale cette affiche vous donne-t-elle au premier regard ?</label><br>
-      <label><input type="checkbox" name="impression" value="tresPositive"> Très positive</label><br>
-      <label><input type="checkbox" name="impression" value="plutotPositive"> Plutôt positive</label><br>
-      <label><input type="checkbox" name="impression" value="neutre"> Neutre</label><br>
-      <label><input type="checkbox" name="impression" value="plutotNegative"> Plutôt négative</label><br>
-      <label><input type="checkbox" name="impression" value="tresNegative"> Très négative</label><br>
+      <label>Quelle impression générale cette affiche vous donne-t-elle au premier regard ?</label>
+      <select name="impression" required>
+        <option value="tresPositive">Très positive</option>
+        <option value="plutotPositive">Plutôt positive</option>
+        <option value="neutre">Neutre</option>
+        <option value="plutotNegative">Plutôt négative</option>
+        <option value="tresNegative">Très négative</option>
+      </select>
 
       <!-- Q10 -->
-      <label>Est-ce que ce type d'offre renforcerait votre envie d'aller à McDonald's ?</label><br>
-      <label><input type="checkbox" name="envie" value="oui"> Oui</label><br>
-      <label><input type="checkbox" name="envie" value="non"> Non</label><br>
+      <label>Est-ce que ce type d'offre renforcerait votre envie d'aller à McDonald's ?</label>
+      <select name="envie" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
 
       <!-- Q11 -->
-      <label>Auriez-vous envie de consommer cette tablette de chocolat ?</label><br>
-      <label><input type="checkbox" name="consommerTablette" value="oui"> Oui</label><br>
-      <label><input type="checkbox" name="consommerTablette" value="non"> Non</label><br>
+      <label>Auriez-vous envie de consommer cette tablette de chocolat ?</label>
+      <select name="consommerTablette" required>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
 
       <!-- Q12 : tableau prix psychologique -->
-     <label>Pour chaque question, veuillez indiquer le montant supplémentaire le plus juste selon vous (prix d'un menu au choix +...) :</label>
+      <label>Pour chaque question, veuillez indiquer le montant supplémentaire le plus juste selon vous (prix d'un menu au choix +...) :</label>
       <table border="1" cellpadding="8" cellspacing="0">
         <tr>
           <th></th>
@@ -146,36 +176,43 @@
         </tr>
       </table>
 
-
       <!-- Q13 -->
-      <label>Genre</label><br>
-      <label><input type="checkbox" name="genre" value="femme"> Femme</label><br>
-      <label><input type="checkbox" name="genre" value="homme"> Homme</label><br>
-      <label><input type="checkbox" name="genre" value="nonBinaire"> Non-binaire</label><br>
-      <label><input type="checkbox" name="genre" value="prefereNePasRepondre"> Préfère ne pas répondre</label><br>
+      <label>Genre</label>
+      <select name="genre" required>
+        <option value="femme">Femme</option>
+        <option value="homme">Homme</option>
+        <option value="nonBinaire">Non-binaire</option>
+        <option value="prefereNePasRepondre">Préfère ne pas répondre</option>
+      </select>
 
       <!-- Q14 -->
-      <label>Âge</label><br>
-      <label><input type="checkbox" name="age" value="18-25 ans"> 18-25 ans</label><br>
-      <label><input type="checkbox" name="age" value="26-35 ans"> 26-35 ans</label><br>
-      <label><input type="checkbox" name="age" value="36-45 ans"> 36-45 ans</label><br>
-      <label><input type="checkbox" name="age" value="46-55 ans"> 46-55 ans</label><br>
-      <label><input type="checkbox" name="age" value="Plus de 56 ans"> Plus de 56 ans</label><br>
+      <label>Âge</label>
+      <select name="age" required>
+        <option value="18-25">18-25</option>
+        <option value="26-35">26-35</option>
+        <option value="36-45">36-45</option>
+        <option value="46-55">46-55</option>
+        <option value="56+">56+</option>
+      </select>
 
       <!-- Q15 -->
-     <label>Situation professionnelle</label><br>
-      <label><input type="checkbox" name="situation" value="etudiant"> Étudiant</label><br>
-      <label><input type="checkbox" name="situation" value="salarié"> Salarié</label><br>
-      <label><input type="checkbox" name="situation" value="independant"> Indépendant</label><br>
-      <label><input type="checkbox" name="situation" value="sansEmploi"> Sans emploi</label><br>
-      <label><input type="checkbox" name="situation" value="retraite"> Retraité</label><br>
+      <label>Situation professionnelle</label>
+      <select name="situation" required>
+        <option value="etudiant">Étudiant</option>
+        <option value="salarié">Salarié</option>
+        <option value="independant">Indépendant</option>
+        <option value="sansEmploi">Sans emploi</option>
+        <option value="retraite">Retraité</option>
+      </select>
 
       <!-- Q16 -->
-      <label>Zone de résidence</label><br>
-      <label><input type="checkbox" name="zone" value="urbaine"> Urbaine</label><br>
-      <label><input type="checkbox" name="zone" value="periurbaine"> Périurbaine</label><br>
-      <label><input type="checkbox" name="zone" value="rurale"> Rurale</label><br>
-    
+      <label>Zone de résidence</label>
+      <select name="zone" required>
+        <option value="urbaine">Urbaine</option>
+        <option value="periurbaine">Périurbaine</option>
+        <option value="rurale">Rurale</option>
+      </select>
+
       <button type="submit">Envoyer</button>
     </form>
   </div>
@@ -208,6 +245,9 @@
   </script>
 </body>
 </html>
+
+
+
 
 
 
