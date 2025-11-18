@@ -1,23 +1,10 @@
-/* Import d'une police conviviale et arrondie */
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
-
+/* Style général */
 body {
-  font-family: 'Baloo 2', Arial, sans-serif;
-  background-color: #fffbea; /* fond crème léger */
+  font-family: Arial, sans-serif;
+  background-color: #fffbea;
   color: #333;
   margin: 0;
   padding: 0;
-}
-
-/* Bandeau haut vert sapin */
-h1 {
-  background-color: #006633; /* vert sapin McDo France */
-  color: #FFC72C; /* jaune McDo France */
-  text-align: center;
-  font-size: 2.2em;
-  margin: 0;
-  padding: 20px;
-  border-bottom: 5px solid #FFC72C;
 }
 
 .container {
@@ -30,40 +17,37 @@ h1 {
   box-shadow: 0 0 15px rgba(0, 102, 51, 0.3);
 }
 
-p {
+/* TITRE */
+h1 {
+  background-color: #006633;
+  color: #FFC72C;
   text-align: center;
-  font-size: 1.1em;
-  margin-bottom: 30px;
-  color: #006633;
+  font-size: 2.4em;
+  margin: 0;
+  padding: 20px;
+  border-bottom: 5px solid #FFC72C;
 }
 
-label {
-  display: block;
-  font-weight: 600;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  color: #006633;
+/* QUESTIONS (gras + plus grandes) */
+.question-label {
+  font-size: 1.3em;       /* plus grand */
+  font-weight: bold;      /* en gras */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #006633;         /* vert sapin */
 }
 
-select {
-  width: 100%;
-  padding: 8px;
-  border: 2px solid #FFC72C;
-  border-radius: 6px;
+/* RÉPONSES (pas en gras) */
+form label {
   font-size: 1em;
-  background-color: #fffbea;
-}
-
-.checkbox-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: normal;
+  font-weight: normal;    /* pas en gras */
   color: #333;
 }
 
+/* Bouton */
 button {
-  background-color: #FFC72C; /* jaune McDo France */
-  color: #006633; /* texte vert sapin */
+  background-color: #FFC72C;
+  color: #006633;
   border: none;
   padding: 12px 20px;
   font-size: 1.1em;
@@ -76,10 +60,11 @@ button {
 }
 
 button:hover {
-  background-color: #006633; /* vert sapin au survol */
-  color: #FFC72C; /* texte jaune */
+  background-color: #006633;
+  color: #FFC72C;
 }
 
+/* Tableau Q12 */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -87,8 +72,8 @@ table {
 }
 
 table th {
-  background-color: #006633; /* vert sapin */
-  color: #FFC72C; /* jaune */
+  background-color: #006633;
+  color: #FFC72C;
   padding: 10px;
 }
 
@@ -98,6 +83,7 @@ table td {
   border: 1px solid #FFC72C;
 }
 
+/* Image */
 .image-test {
   text-align: center;
   margin: 20px 0;
@@ -106,10 +92,10 @@ table td {
 #testImage {
   max-width: 100%;
   height: auto;
-  border: 5px solid #006633; /* cadre vert sapin */
+  border: 5px solid #006633;
   border-radius: 10px;
   padding: 5px;
-  background-color: #FFC72C; /* fond jaune derrière l’image */
+  background-color: #FFC72C;
 }
 
 
