@@ -34,7 +34,7 @@
       <p class="question-label">Évaluez l'importance de chaque motivation lorsque vous allez chez McDonald's (1 = pas du tout important, 7 = très important)</p>
 <table>
   <tr>
-    <th>Motivation</th>
+    <th>Motivations</th>
     <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th>
   </tr>
   <tr>
@@ -161,59 +161,29 @@
       <label><input type="checkbox" name="consommerTablette" value="non" class="single-choice"> Non</label><br>
 
       <!-- Q12 -->
-       <label>Pour chaque question, veuillez indiquer le montant supplémentaire le plus juste selon vous (prix d'un menu au choix +...) :</label>
-      <table border="1" cellpadding="8" cellspacing="0">
-        <tr>
-          <th></th>
-          <th>1 €</th>
-          <th>1,50 €</th>
-          <th>2 €</th>
-          <th>2,50 €</th>
-          <th>3 €</th>
-          <th>3,50 €</th>
-          <th>4 €</th>
-        </tr>
-        <tr>
-          <td>À partir de quel montant supplémentaire trouvez-vous l'offre trop chère ?</td>
-          <td><input type="radio" name="tropChere" value="1"></td>
-          <td><input type="radio" name="tropChere" value="1.5"></td>
-          <td><input type="radio" name="tropChere" value="2"></td>
-          <td><input type="radio" name="tropChere" value="2.5"></td>
-          <td><input type="radio" name="tropChere" value="3"></td>
-          <td><input type="radio" name="tropChere" value="3.5"></td>
-          <td><input type="radio" name="tropChere" value="4"></td>
-        </tr>
-        <tr>
-          <td>À partir de quel montant supplémentaire trouvez-vous l'offre chère mais acceptable ?</td>
-          <td><input type="radio" name="acceptable" value="1"></td>
-          <td><input type="radio" name="acceptable" value="1.5"></td>
-          <td><input type="radio" name="acceptable" value="2"></td>
-          <td><input type="radio" name="acceptable" value="2.5"></td>
-          <td><input type="radio" name="acceptable" value="3"></td>
-          <td><input type="radio" name="acceptable" value="3.5"></td>
-          <td><input type="radio" name="acceptable" value="4"></td>
-        </tr>
-        <tr>
-          <td>À partir de quel montant supplémentaire trouvez-vous l'offre bon marché ?</td>
-          <td><input type="radio" name="bonMarche" value="1"></td>
-          <td><input type="radio" name="bonMarche" value="1.5"></td>
-          <td><input type="radio" name="bonMarche" value="2"></td>
-          <td><input type="radio" name="bonMarche" value="2.5"></td>
-          <td><input type="radio" name="bonMarche" value="3"></td>
-          <td><input type="radio" name="bonMarche" value="3.5"></td>
-          <td><input type="radio" name="bonMarche" value="4"></td>
-        </tr>
-        <tr>
-          <td>À partir de quel montant supplémentaire trouvez-vous l'offre trop bon marché ?</td>
-          <td><input type="radio" name="tropBonMarche" value="1"></td>
-          <td><input type="radio" name="tropBonMarche" value="1.5"></td>
-          <td><input type="radio" name="tropBonMarche" value="2"></td>
-          <td><input type="radio" name="tropBonMarche" value="2.5"></td>
-          <td><input type="radio" name="tropBonMarche" value="3"></td>
-          <td><input type="radio" name="tropBonMarche" value="3.5"></td>
-          <td><input type="radio" name="tropBonMarche" value="4"></td>
-        </tr>
-      </table>
+       <p class="question-label">12. Indiquez le montant supplémentaire (en €) pour chaque situation :</p>
+<table>
+  <tr>
+    <th>Situations</th>
+    <th>Montant en €</th>
+  </tr>
+  <tr>
+    <td>A partir de quel montant supplémentaire trouvez-vous l'offre trop chère ?</td>
+    <td><input type="number" name="montant_trop_chere" placeholder="Ex : 3,00" step="0.01" min="0"></td>
+  </tr>
+  <tr>
+    <td>A partir de quel montant supplémentaire trouvez-vous l'offre chère mais acceptable ?</td>
+    <td><input type="number" name="montant_chere_acceptable" placeholder="Ex : 2,50" step="0.01" min="0"></td>
+  </tr>
+  <tr>
+    <td>A partir de quel montant supplémentaire trouvez-vous l'offre bon marché ?</td>
+    <td><input type="number" name="montant_bon_marche" placeholder="Ex : 1,50" step="0.01" min="0"></td>
+  </tr>
+  <tr>
+    <td>A partir de quel montant supplémentaire trouvez-vous l'offre trop bon marché ?</td>
+    <td><input type="number" name="montant_trop_bon_marche" placeholder="Ex : 0,50" step="0.01" min="0"></td>
+  </tr>
+</table>
 
       <!-- Q13 -->
       <p class="question-label">Genre</p>
