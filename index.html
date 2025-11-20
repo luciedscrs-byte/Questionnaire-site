@@ -4,230 +4,253 @@
   <meta charset="UTF-8">
   <title>Questionnaire McDonald's</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .options-inline { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+    .error { border: 2px solid red !important; padding: 6px; border-radius: 6px; }
+    table { border-collapse: collapse; margin-bottom: 12px; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: center; }
+    .image-test { margin: 16px 0; }
+    .question-label { font-weight: 600; margin: 14px 0 6px; }
+  </style>
 </head>
 <body>
   <div class="container">
     <h1>Questionnaire McDonald's</h1>
 
-    <form action="https://formspree.io/f/mrbrykkp" method="POST">
-
+    <form id="surveyForm" action="https://formspree.io/f/mrbrykkp" method="POST">
       <!-- Q1 -->
       <p class="question-label">1. Êtes-vous un consommateur régulier de McDonald's ?</p>
-      <label><input type="checkbox" name="consoreg" value="oui" class="single-choice"> Oui</label>
-      <label><input type="checkbox" name="consoreg" value="non" class="single-choice"> Non</label>
+      <div class="options-inline" data-question="consoreg">
+        <label><input type="checkbox" name="consoreg" value="oui" class="single-choice"> Oui</label>
+        <label><input type="checkbox" name="consoreg" value="non" class="single-choice"> Non</label>
+      </div>
 
       <!-- Q2 -->
       <p class="question-label">2. À quelle fréquence allez-vous chez McDonald's ?</p>
-      <label><input type="checkbox" name="frequence" value="1semaine" class="single-choice"> 1 fois par semaine</label><br>
-      <label><input type="checkbox" name="frequence" value="plusieurssemaine" class="single-choice"> Plusieurs fois par semaine</label><br>
-      <label><input type="checkbox" name="frequence" value="1mois" class="single-choice"> 1 fois par mois</label><br>
-      <label><input type="checkbox" name="frequence" value="plusieursmois" class="single-choice"> Plusieurs fois par mois</label><br>
-      <label><input type="checkbox" name="frequence" value="annee" class="single-choice"> Quelques fois dans l'année</label><br>
-      <label><input type="checkbox" name="frequence" value="jamais" class="single-choice"> Jamais</label><br>
+      <div class="options-inline" data-question="frequence">
+        <label><input type="checkbox" name="frequence" value="1semaine" class="single-choice"> 1 fois par semaine</label>
+        <label><input type="checkbox" name="frequence" value="plusieurssemaine" class="single-choice"> Plusieurs fois par semaine</label>
+        <label><input type="checkbox" name="frequence" value="1mois" class="single-choice"> 1 fois par mois</label>
+        <label><input type="checkbox" name="frequence" value="plusieursmois" class="single-choice"> Plusieurs fois par mois</label>
+        <label><input type="checkbox" name="frequence" value="annee" class="single-choice"> Quelques fois dans l'année</label>
+        <label><input type="checkbox" name="frequence" value="jamais" class="single-choice"> Jamais</label>
+      </div>
 
       <!-- Q3 -->
       <p class="question-label">3. Avez-vous un compte sur l'application McDo+ ?</p>
-      <label><input type="checkbox" name="compteMcDo" value="oui" class="single-choice"> Oui</label>
-      <label><input type="checkbox" name="compteMcDo" value="non" class="single-choice"> Non</label>
+      <div class="options-inline" data-question="compteMcDo">
+        <label><input type="checkbox" name="compteMcDo" value="oui" class="single-choice"> Oui</label>
+        <label><input type="checkbox" name="compteMcDo" value="non" class="single-choice"> Non</label>
+      </div>
 
       <!-- Q4 -->
       <p class="question-label">4. Évaluez l'importance de chaque motivation lorsque vous allez chez McDonald's (1 = pas du tout important, 7 = très important)</p>
-<table>
-  <tr>
-    <th>Motivations</th>
-    <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th>
-  </tr>
-  <tr>
-    <td>Prix abordables</td>
-    <td><input type="checkbox" name="prix" value="1" class="single-choice"></td>
-    <td><input type="checkbox" name="prix" value="2" class="single-choice"></td>
-    <td><input type="checkbox" name="prix" value="3" class="single-choice"></td>
-    <td><input type="checkbox" name="prix" value="4" class="single-choice"></td>
-    <td><input type="checkbox" name="prix" value="5" class="single-choice"></td>
-    <td><input type="checkbox" name="prix" value="6" class="single-choice"></td>
-    <td><input type="checkbox" name="prix" value="7" class="single-choice"></td>
-  </tr>
-  <tr>
-    <td>Offres du moment</td>
-    <td><input type="checkbox" name="offres" value="1" class="single-choice"></td>
-    <td><input type="checkbox" name="offres" value="2" class="single-choice"></td>
-    <td><input type="checkbox" name="offres" value="3" class="single-choice"></td>
-    <td><input type="checkbox" name="offres" value="4" class="single-choice"></td>
-    <td><input type="checkbox" name="offres" value="5" class="single-choice"></td>
-    <td><input type="checkbox" name="offres" value="6" class="single-choice"></td>
-    <td><input type="checkbox" name="offres" value="7" class="single-choice"></td>
-  </tr>
-  <tr>
-    <td>Rapidité du service</td>
-    <td><input type="checkbox" name="rapidite" value="1" class="single-choice"></td>
-    <td><input type="checkbox" name="rapidite" value="2" class="single-choice"></td>
-    <td><input type="checkbox" name="rapidite" value="3" class="single-choice"></td>
-    <td><input type="checkbox" name="rapidite" value="4" class="single-choice"></td>
-    <td><input type="checkbox" name="rapidite" value="5" class="single-choice"></td>
-    <td><input type="checkbox" name="rapidite" value="6" class="single-choice"></td>
-    <td><input type="checkbox" name="rapidite" value="7" class="single-choice"></td>
-  </tr>
-  <tr>
-    <td>Goût / plaisir</td>
-    <td><input type="checkbox" name="gout" value="1" class="single-choice"></td>
-    <td><input type="checkbox" name="gout" value="2" class="single-choice"></td>
-    <td><input type="checkbox" name="gout" value="3" class="single-choice"></td>
-    <td><input type="checkbox" name="gout" value="4" class="single-choice"></td>
-    <td><input type="checkbox" name="gout" value="5" class="single-choice"></td>
-    <td><input type="checkbox" name="gout" value="6" class="single-choice"></td>
-    <td><input type="checkbox" name="gout" value="7" class="single-choice"></td>
-  </tr>
-  <tr>
-    <td>Habitude</td>
-    <td><input type="checkbox" name="habitude" value="1" class="single-choice"></td>
-    <td><input type="checkbox" name="habitude" value="2" class="single-choice"></td>
-    <td><input type="checkbox" name="habitude" value="3" class="single-choice"></td>
-    <td><input type="checkbox" name="habitude" value="4" class="single-choice"></td>
-    <td><input type="checkbox" name="habitude" value="5" class="single-choice"></td>
-    <td><input type="checkbox" name="habitude" value="6" class="single-choice"></td>
-    <td><input type="checkbox" name="habitude" value="7" class="single-choice"></td>
-  </tr>
-  <tr>
-    <td>Collaborations / partenariat</td>
-    <td><input type="checkbox" name="collaborations" value="1" class="single-choice"></td>
-    <td><input type="checkbox" name="collaborations" value="2" class="single-choice"></td>
-    <td><input type="checkbox" name="collaborations" value="3" class="single-choice"></td>
-    <td><input type="checkbox" name="collaborations" value="4" class="single-choice"></td>
-    <td><input type="checkbox" name="collaborations" value="5" class="single-choice"></td>
-    <td><input type="checkbox" name="collaborations" value="6" class="single-choice"></td>
-    <td><input type="checkbox" name="collaborations" value="7" class="single-choice"></td>
-  </tr>
-  <tr>
-    <td>Accessibilité / proximité</td>
-    <td><input type="checkbox" name="accessibilite" value="1" class="single-choice"></td>
-    <td><input type="checkbox" name="accessibilite" value="2" class="single-choice"></td>
-    <td><input type="checkbox" name="accessibilite" value="3" class="single-choice"></td>
-    <td><input type="checkbox" name="accessibilite" value="4" class="single-choice"></td>
-    <td><input type="checkbox" name="accessibilite" value="5" class="single-choice"></td>
-    <td><input type="checkbox" name="accessibilite" value="6" class="single-choice"></td>
-    <td><input type="checkbox" name="accessibilite" value="7" class="single-choice"></td>
-  </tr>
-</table>
+      <table>
+        <tr>
+          <th>Motivations</th>
+          <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th>
+        </tr>
+        <tr>
+          <td>Prix abordables</td>
+          <td><input type="checkbox" name="prix" value="1" class="single-choice"></td>
+          <td><input type="checkbox" name="prix" value="2" class="single-choice"></td>
+          <td><input type="checkbox" name="prix" value="3" class="single-choice"></td>
+          <td><input type="checkbox" name="prix" value="4" class="single-choice"></td>
+          <td><input type="checkbox" name="prix" value="5" class="single-choice"></td>
+          <td><input type="checkbox" name="prix" value="6" class="single-choice"></td>
+          <td><input type="checkbox" name="prix" value="7" class="single-choice"></td>
+        </tr>
+        <tr>
+          <td>Offres du moment</td>
+          <td><input type="checkbox" name="offres" value="1" class="single-choice"></td>
+          <td><input type="checkbox" name="offres" value="2" class="single-choice"></td>
+          <td><input type="checkbox" name="offres" value="3" class="single-choice"></td>
+          <td><input type="checkbox" name="offres" value="4" class="single-choice"></td>
+          <td><input type="checkbox" name="offres" value="5" class="single-choice"></td>
+          <td><input type="checkbox" name="offres" value="6" class="single-choice"></td>
+          <td><input type="checkbox" name="offres" value="7" class="single-choice"></td>
+        </tr>
+        <tr>
+          <td>Rapidité du service</td>
+          <td><input type="checkbox" name="rapidite" value="1" class="single-choice"></td>
+          <td><input type="checkbox" name="rapidite" value="2" class="single-choice"></td>
+          <td><input type="checkbox" name="rapidite" value="3" class="single-choice"></td>
+          <td><input type="checkbox" name="rapidite" value="4" class="single-choice"></td>
+          <td><input type="checkbox" name="rapidite" value="5" class="single-choice"></td>
+          <td><input type="checkbox" name="rapidite" value="6" class="single-choice"></td>
+          <td><input type="checkbox" name="rapidite" value="7" class="single-choice"></td>
+        </tr>
+        <tr>
+          <td>Goût / plaisir</td>
+          <td><input type="checkbox" name="gout" value="1" class="single-choice"></td>
+          <td><input type="checkbox" name="gout" value="2" class="single-choice"></td>
+          <td><input type="checkbox" name="gout" value="3" class="single-choice"></td>
+          <td><input type="checkbox" name="gout" value="4" class="single-choice"></td>
+          <td><input type="checkbox" name="gout" value="5" class="single-choice"></td>
+          <td><input type="checkbox" name="gout" value="6" class="single-choice"></td>
+          <td><input type="checkbox" name="gout" value="7" class="single-choice"></td>
+        </tr>
+        <tr>
+          <td>Habitude</td>
+          <td><input type="checkbox" name="habitude" value="1" class="single-choice"></td>
+          <td><input type="checkbox" name="habitude" value="2" class="single-choice"></td>
+          <td><input type="checkbox" name="habitude" value="3" class="single-choice"></td>
+          <td><input type="checkbox" name="habitude" value="4" class="single-choice"></td>
+          <td><input type="checkbox" name="habitude" value="5" class="single-choice"></td>
+          <td><input type="checkbox" name="habitude" value="6" class="single-choice"></td>
+          <td><input type="checkbox" name="habitude" value="7" class="single-choice"></td>
+        </tr>
+        <tr>
+          <td>Collaborations / partenariat</td>
+          <td><input type="checkbox" name="collaborations" value="1" class="single-choice"></td>
+          <td><input type="checkbox" name="collaborations" value="2" class="single-choice"></td>
+          <td><input type="checkbox" name="collaborations" value="3" class="single-choice"></td>
+          <td><input type="checkbox" name="collaborations" value="4" class="single-choice"></td>
+          <td><input type="checkbox" name="collaborations" value="5" class="single-choice"></td>
+          <td><input type="checkbox" name="collaborations" value="6" class="single-choice"></td>
+          <td><input type="checkbox" name="collaborations" value="7" class="single-choice"></td>
+        </tr>
+        <tr>
+          <td>Accessibilité / proximité</td>
+          <td><input type="checkbox" name="accessibilite" value="1" class="single-choice"></td>
+          <td><input type="checkbox" name="accessibilite" value="2" class="single-choice"></td>
+          <td><input type="checkbox" name="accessibilite" value="3" class="single-choice"></td>
+          <td><input type="checkbox" name="accessibilite" value="4" class="single-choice"></td>
+          <td><input type="checkbox" name="accessibilite" value="5" class="single-choice"></td>
+          <td><input type="checkbox" name="accessibilite" value="6" class="single-choice"></td>
+          <td><input type="checkbox" name="accessibilite" value="7" class="single-choice"></td>
+        </tr>
+      </table>
 
       <!-- Q5 -->
       <p class="question-label">5. Que pensez-vous du rapport qualité/prix chez McDonald's aujourd'hui ?</p>
-<div class="options-inline">
-      <label><input type="checkbox" name="qualiteprix" value="tresPeuSatisfaisant" class="single-choice"> Très peu satisfaisant</label>
-      <label><input type="checkbox" name="qualiteprix" value="peuSatisfaisant" class="single-choice"> Peu satisfaisant</label>
-      <label><input type="checkbox" name="qualiteprix" value="neutre" class="single-choice"> Neutre</label> 
-      <label><input type="checkbox" name="qualiteprix" value="satisfaisant" class="single-choice"> Satisfaisant</label>
-      <label><input type="checkbox" name="qualiteprix" value="tresSatisfaisant" class="single-choice"> Très satisfaisant</label>
-</div>
+      <div class="options-inline" data-question="qualiteprix">
+        <label><input type="checkbox" name="qualiteprix" value="tresPeuSatisfaisant" class="single-choice"> Très peu satisfaisant</label>
+        <label><input type="checkbox" name="qualiteprix" value="peuSatisfaisant" class="single-choice"> Peu satisfaisant</label>
+        <label><input type="checkbox" name="qualiteprix" value="neutre" class="single-choice"> Neutre</label>
+        <label><input type="checkbox" name="qualiteprix" value="satisfaisant" class="single-choice"> Satisfaisant</label>
+        <label><input type="checkbox" name="qualiteprix" value="tresSatisfaisant" class="single-choice"> Très satisfaisant</label>
+      </div>
 
       <!-- Q6 -->
       <p class="question-label">6. Les prix de McDonald's sont moins intéressants de nos jours :</p>
-<div class="options-inline">
-      <label><input type="checkbox" name="MoinsInteressants" value="pasdutout" class="single-choice"> Pas du tout d'accord</label>
-      <label><input type="checkbox" name="MoinsInteressants" value="plutotpas" class="single-choice"> Plutôt pas d'accord</label>
-      <label><input type="checkbox" name="MoinsInteressants" value="daccord" class="single-choice"> D'accord</label>
-      <label><input type="checkbox" name="MoinsInteressants" value="plutot" class="single-choice"> Plutôt d'accord</label>
-      <label><input type="checkbox" name="MoinsInteressants" value="toutafait" class="single-choice"> Tout à fait d'accord</label>
-</div>
+      <div class="options-inline" data-question="MoinsInteressants">
+        <label><input type="checkbox" name="MoinsInteressants" value="pasdutout" class="single-choice"> Pas du tout d'accord</label>
+        <label><input type="checkbox" name="MoinsInteressants" value="plutotpas" class="single-choice"> Plutôt pas d'accord</label>
+        <label><input type="checkbox" name="MoinsInteressants" value="daccord" class="single-choice"> D'accord</label>
+        <label><input type="checkbox" name="MoinsInteressants" value="plutot" class="single-choice"> Plutôt d'accord</label>
+        <label><input type="checkbox" name="MoinsInteressants" value="toutafait" class="single-choice"> Tout à fait d'accord</label>
+      </div>
 
-      <!-- Q7 -->
-      <p class="question-label">7. Quelle est votre dépense moyenne lorsque vous consommez chez McDonald's ?</p>
-      <input type="number" name="depense_moyenne" placeholder="Ex : 12,50" step="0.01" min="0">
-
-      <!-- Q8 -->
-      <p class="question-label">8. Avez-vous l'habitude de prendre un dessert lorsque vous allez chez McDonald's ?</p>
-      <label><input type="checkbox" name="dessert" value="oui" class="single-choice"> Oui</label>
-      <label><input type="checkbox" name="dessert" value="non" class="single-choice"> Non</label>
-
-      <!-- IMAGE RANDOMISÉE -->
+      <!-- Image aléatoire -->
       <div class="image-test">
         <img id="testImage" alt="Image de la tablette (McDo ou Partenariat)">
       </div>
       <input type="hidden" id="imageName" name="imageName" value="">
 
+      <!-- Q7 -->
+      <p class="question-label">7. Quelle est votre dépense moyenne lorsque vous consommez chez McDonald's ?</p>
+      <input type="number" name="depense_moyenne" placeholder="Ex : 12,50" step="0.01" min="0" required>
+
+      <!-- Q8 -->
+      <p class="question-label">8. Avez-vous l'habitude de prendre un dessert lorsque vous allez chez McDonald's ?</p>
+      <div class="options-inline" data-question="dessert">
+        <label><input type="checkbox" name="dessert" value="oui" class="single-choice"> Oui</label>
+        <label><input type="checkbox" name="dessert" value="non" class="single-choice"> Non</label>
+      </div>
+
       <!-- Q9 -->
       <p class="question-label">9. Quelle impression générale cette affiche vous donne-t-elle au premier regard ?</p>
-<div class="options-inline">
-      <label><input type="checkbox" name="impression" value="tresNegative" class="single-choice"> Très négative</label>
-      <label><input type="checkbox" name="impression" value="plutotNegative" class="single-choice"> Plutôt négative</label>
-      <label><input type="checkbox" name="impression" value="neutre" class="single-choice"> Neutre</label>
-      <label><input type="checkbox" name="impression" value="plutotPositive" class="single-choice"> Plutôt positive</label>
-      <label><input type="checkbox" name="impression" value="tresPositive" class="single-choice"> Très positive</label>
-</div>
+      <div class="options-inline" data-question="impression">
+        <label><input type="checkbox" name="impression" value="tresNegative" class="single-choice"> Très négative</label>
+        <label><input type="checkbox" name="impression" value="plutotNegative" class="single-choice"> Plutôt négative</label>
+        <label><input type="checkbox" name="impression" value="neutre" class="single-choice"> Neutre</label>
+        <label><input type="checkbox" name="impression" value="plutotPositive" class="single-choice"> Plutôt positive</label>
+        <label><input type="checkbox" name="impression" value="tresPositive" class="single-choice"> Très positive</label>
+      </div>
 
       <!-- Q10 -->
       <p class="question-label">10. Est-ce que ce type d'offre renforcerait votre envie d'aller à McDonald's ?</p>
-      <label><input type="checkbox" name="envie" value="oui" class="single-choice"> Oui</label>
-      <label><input type="checkbox" name="envie" value="non" class="single-choice"> Non</label>
+      <div class="options-inline" data-question="envie">
+        <label><input type="checkbox" name="envie" value="oui" class="single-choice"> Oui</label>
+        <label><input type="checkbox" name="envie" value="non" class="single-choice"> Non</label>
+      </div>
 
       <!-- Q11 -->
       <p class="question-label">11. Auriez-vous envie de consommer cette tablette de chocolat ?</p>
-      <label><input type="checkbox" name="consoTablette" value="oui" class="single-choice"> Oui</label>
-      <label><input type="checkbox" name="consoTablette" value="non" class="single-choice"> Non</label>
+      <div class="options-inline" data-question="consoTablette">
+        <label><input type="checkbox" name="consoTablette" value="oui" class="single-choice"> Oui</label>
+        <label><input type="checkbox" name="consoTablette" value="non" class="single-choice"> Non</label>
+      </div>
 
       <!-- Q12 -->
-       <p class="question-label">12. Indiquez le montant supplémentaire (en €) à rajouter à un menu au choix (que vous avez l'habitude de consommer par exemple) pour chaque situation :</p>
-<table>
-  <tr>
-    <th>Situations</th>
-    <th>Montant en €</th>
-  </tr>
-  <tr>
-    <td>A partir de quel montant supplémentaire trouvez-vous l'offre trop chère ?</td>
-    <td><input type="number" name="trop_chere" placeholder="Ex : 3,00" step="0.01" min="0"></td>
-  </tr>
-  <tr>
-    <td>A partir de quel montant supplémentaire trouvez-vous l'offre chère mais acceptable ?</td>
-    <td><input type="number" name="chere_acceptable" placeholder="Ex : 2,50" step="0.01" min="0"></td>
-  </tr>
-  <tr>
-    <td>A partir de quel montant supplémentaire trouvez-vous l'offre bon marché ?</td>
-    <td><input type="number" name="bon_marche" placeholder="Ex : 1,50" step="0.01" min="0"></td>
-  </tr>
-  <tr>
-    <td>A partir de quel montant supplémentaire trouvez-vous l'offre trop bon marché ?</td>
-    <td><input type="number" name="trop_bon_marche" placeholder="Ex : 0,50" step="0.01" min="0"></td>
-  </tr>
-</table>
+      <p class="question-label">12. Indiquez le montant supplémentaire (en €) à rajouter à un menu au choix pour chaque situation :</p>
+      <table>
+        <tr><th>Situations</th><th>Montant en €</th></tr>
+        <tr>
+          <td>A partir de quel montant supplémentaire trouvez-vous l'offre trop chère ?</td>
+          <td><input type="number" name="trop_chere" placeholder="Ex : 3,00" step="0.01" min="0" required></td>
+        </tr>
+        <tr>
+          <td>A partir de quel montant supplémentaire trouvez-vous l'offre chère mais acceptable ?</td>
+          <td><input type="number" name="chere_acceptable" placeholder="Ex : 2,50" step="0.01" min="0" required></td>
+        </tr>
+        <tr>
+          <td>A partir de quel montant supplémentaire trouvez-vous l'offre bon marché ?</td>
+          <td><input type="number" name="bon_marche" placeholder="Ex : 1,50" step="0.01" min="0" required></td>
+        </tr>
+        <tr>
+          <td>A partir de quel montant supplémentaire trouvez-vous l'offre trop bon marché ?</td>
+          <td><input type="number" name="trop_bon_marche" placeholder="Ex : 0,50" step="0.01" min="0" required></td>
+        </tr>
+      </table>
 
       <!-- Q13 -->
       <p class="question-label">13. Genre</p>
-      <label><input type="checkbox" name="genre" value="femme" class="single-choice"> Femme</label><br>
-      <label><input type="checkbox" name="genre" value="homme" class="single-choice"> Homme</label><br>
-      <label><input type="checkbox" name="genre" value="nonBinaire" class="single-choice"> Non-binaire</label><br>
-      <label><input type="checkbox" name="genre" value="prefereNePasRepondre" class="single-choice"> Préfère ne pas répondre</label><br>
+      <div class="options-inline" data-question="genre">
+        <label><input type="checkbox" name="genre" value="femme" class="single-choice"> Femme</label>
+        <label><input type="checkbox" name="genre" value="homme" class="single-choice"> Homme</label>
+        <label><input type="checkbox" name="genre" value="nonBinaire" class="single-choice"> Non-binaire</label>
+        <label><input type="checkbox" name="genre" value="prefereNePasRepondre" class="single-choice"> Préfère ne pas répondre</label>
+      </div>
 
       <!-- Q14 -->
       <p class="question-label">14. Âge</p>
-      <label><input type="checkbox" name="age" value="Moins de 18 ans" class="single-choice"> Moins de 18 ans</label><br>
-      <label><input type="checkbox" name="age" value="18-25 ans " class="single-choice"> 18-25 ans</label><br>
-      <label><input type="checkbox" name="age" value="26-35 ans" class="single-choice"> 26-35 ans</label><br>
-      <label><input type="checkbox" name="age" value="36-45 ans" class="single-choice"> 36-45 ans</label><br>
-      <label><input type="checkbox" name="age" value="46-55 ans" class="single-choice"> 46-55 ans</label><br>
-      <label><input type="checkbox" name="age" value="Plus de 56 ans" class="single-choice"> Plus de 56 ans</label><br>
+      <div class="options-inline" data-question="age">
+        <label><input type="checkbox" name="age" value="Moins de 18 ans" class="single-choice"> Moins de 18 ans</label>
+        <label><input type="checkbox" name="age" value="18-25 ans" class="single-choice"> 18-25 ans</label>
+        <label><input type="checkbox" name="age" value="26-35 ans" class="single-choice"> 26-35 ans</label>
+        <label><input type="checkbox" name="age" value="36-45 ans" class="single-choice"> 36-45 ans</label>
+        <label><input type="checkbox" name="age" value="46-55 ans" class="single-choice"> 46-55 ans</label>
+        <label><input type="checkbox" name="age" value="Plus de 56 ans" class="single-choice"> Plus de 56 ans</label>
+      </div>
 
       <!-- Q15 -->
       <p class="question-label">15. Situation professionnelle</p>
-      <label><input type="checkbox" name="situation" value="etudiant" class="single-choice"> Étudiant</label><br>
-      <label><input type="checkbox" name="situation" value="salarié" class="single-choice"> Salarié</label><br>
-      <label><input type="checkbox" name="situation" value="independant" class="single-choice"> Indépendant</label><br>
-      <label><input type="checkbox" name="situation" value="sansEmploi" class="single-choice"> Sans emploi</label><br>
-      <label><input type="checkbox" name="situation" value="retraite" class="single-choice"> Retraité</label><br>
+      <div class="options-inline" data-question="situation">
+        <label><input type="checkbox" name="situation" value="etudiant" class="single-choice"> Étudiant</label>
+        <label><input type="checkbox" name="situation" value="salarié" class="single-choice"> Salarié</label>
+        <label><input type="checkbox" name="situation" value="independant" class="single-choice"> Indépendant</label>
+        <label><input type="checkbox" name="situation" value="sansEmploi" class="single-choice"> Sans emploi</label>
+        <label><input type="checkbox" name="situation" value="retraite" class="single-choice"> Retraité</label>
+      </div>
 
       <!-- Q16 -->
       <p class="question-label">16. Zone de résidence</p>
-      <label><input type="checkbox" name="zone" value="urbaine" class="single-choice"> Urbaine</label><br>
-      <label><input type="checkbox" name="zone" value="periurbaine" class="single-choice"> Périurbaine</label><br>
-      <label><input type="checkbox" name="zone" value="rurale" class="single-choice"> Rurale</label><br>
+      <div class="options-inline" data-question="zone">
+        <label><input type="checkbox" name="zone" value="urbaine" class="single-choice"> Urbaine</label>
+        <label><input type="checkbox" name="zone" value="periurbaine" class="single-choice"> Périurbaine</label>
+        <label><input type="checkbox" name="zone" value="rurale" class="single-choice"> Rurale</label>
+      </div>
 
       <button type="submit">Envoyer</button>
     </form>
   </div>
 
-  <!-- Script: image aléatoire + single-choice + motivations (2 max) -->
   <script>
+    // Image aléatoire + sélection unique
     document.addEventListener('DOMContentLoaded', () => {
-      // Afficher une image aléatoire et stocker son nom
-      const images = ["McDo.png", "partenariat.png"]; // adapte le chemin si besoin (ex: images/McDo.png)
+      const images = ["McDo.png", "partenariat.png"]; // adapte le chemin si besoin
       const imgEl = document.getElementById("testImage");
       const hiddenInput = document.getElementById("imageName");
       if (imgEl && hiddenInput) {
@@ -236,32 +259,68 @@
         hiddenInput.value = images[randomIndex];
       }
 
-      // Limiter à une seule case cochée par question (tout sauf motivations)
+      // Sélection unique par groupe (checkbox utilisées comme radio)
       const singleChoices = document.querySelectorAll('input.single-choice');
       singleChoices.forEach(box => {
         box.addEventListener('change', (e) => {
           if (e.target.checked) {
             const name = e.target.name;
-            document.querySelectorAll('input[name="'+name+'"]').forEach(other => {
+            document.querySelectorAll('input[name="' + name + '"]').forEach(other => {
               if (other !== e.target) other.checked = false;
             });
           }
         });
       });
+    });
 
-      // Limiter la question motivations à 2 choix maximum
-      const motivationCheckboxes = document.querySelectorAll('input[name="motivations[]"]');
-      motivationCheckboxes.forEach(cb => {
-        cb.addEventListener('change', (e) => {
-          const checked = Array.from(motivationCheckboxes).filter(x => x.checked);
-          if (checked.length > 2) {
-            e.target.checked = false;
-            alert("Vous ne pouvez sélectionner que 2 motivations maximum.");
-          }
-        });
+    // Validation obligatoire avant envoi
+    document.getElementById("surveyForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let valid = true;
+
+      // a) Validation des groupes de choix (au moins 1 coché par .options-inline)
+      const groups = document.querySelectorAll(".options-inline");
+      groups.forEach(group => {
+        group.classList.remove("error");
+        const inputs = group.querySelectorAll('input[type="checkbox"]');
+        const oneChecked = Array.from(inputs).some(cb => cb.checked);
+        if (!oneChecked) {
+          valid = false;
+          group.classList.add("error");
+        }
       });
+
+      // b) Validation des champs requis (nombre/texte)
+      const requiredInputs = document.querySelectorAll('input[required], textarea[required]');
+      requiredInputs.forEach(inp => {
+        inp.classList.remove("error");
+        if (!inp.value || (inp.type === "number" && inp.value === "")) {
+          valid = false;
+          inp.classList.add("error");
+        }
+      });
+
+      // c) Validation de la matrice Q4 : chaque ligne (par name) doit avoir 1 case cochée
+      const matrixNames = ["prix","offres","rapidite","gout","habitude","collaborations","accessibilite"];
+      matrixNames.forEach(name => {
+        const boxes = document.querySelectorAll('input[name="' + name + '"]');
+        const oneChecked = Array.from(boxes).some(cb => cb.checked);
+        boxes.forEach(cb => cb.parentElement.classList.remove("error"));
+        if (!oneChecked) {
+          valid = false;
+          boxes.forEach(cb => cb.parentElement.classList.add("error"));
+        }
+      });
+
+      if (!valid) {
+        alert("Merci de répondre à toutes les questions obligatoires avant d'envoyer.");
+        return;
+      }
+
+      // Envoi si tout est valide
+      e.target.submit();
     });
   </script>
 </body>
 </html>
-
