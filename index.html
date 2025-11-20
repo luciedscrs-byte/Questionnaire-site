@@ -11,6 +11,7 @@
     th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: center; }
     .image-test { margin: 16px 0; }
     .question-label { font-weight: 600; margin: 14px 0 6px; }
+    button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
   </style>
 </head>
 <body>
@@ -127,7 +128,7 @@
       <div class="options-inline" data-question="qualiteprix">
         <label><input type="checkbox" name="qualiteprix" value="tresPeuSatisfaisant" class="single-choice"> Très peu satisfaisant</label>
         <label><input type="checkbox" name="qualiteprix" value="peuSatisfaisant" class="single-choice"> Peu satisfaisant</label>
-        <label><input type="checkbox" name="qualiteprix" value="neutre" class="single-choice"> Neutre</label>
+        <label><input type="checkbox" name="qualiteprix" value="neutre" class="single-choice"> Neutre</label> 
         <label><input type="checkbox" name="qualiteprix" value="satisfaisant" class="single-choice"> Satisfaisant</label>
         <label><input type="checkbox" name="qualiteprix" value="tresSatisfaisant" class="single-choice"> Très satisfaisant</label>
       </div>
@@ -279,7 +280,7 @@
 
       let valid = true;
 
-      // a) Validation des groupes de choix (au moins 1 coché par .options-inline)
+      // a) Validation des groupes de choix (au moins 1 coché par bloc .options-inline)
       const groups = document.querySelectorAll(".options-inline");
       groups.forEach(group => {
         group.classList.remove("error");
